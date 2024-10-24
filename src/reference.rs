@@ -142,6 +142,7 @@ fn resolve_helper<'a>(
     if seen.contains(reference) {
         panic!("Circular reference: {}", reference);
     }
+    println!("\n\n\n\n\n \t\t inside resolve_helper\n\n");
     seen.insert(reference.to_string());
     let reference = SchemaReference::from_str(&reference);
     match &reference {
